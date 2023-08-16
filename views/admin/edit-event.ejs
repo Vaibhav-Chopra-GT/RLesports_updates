@@ -1,0 +1,29 @@
+<a href="/dashboard">&larr; Back</a>
+<div class="admin-title">
+  <h2>Edit Events</h2>
+  <form action="/delete-post/<%= data._id %>?_method=DELETE" method="POST">
+    <input type="submit" value="Delete" class="btn-delete btn">
+  </form>
+</div>
+
+<form action="/edit-event/<%= data._id %>?_method=PUT" method="POST">
+
+
+  <label for="name"><b>Name</b></label>
+  <input type="text" placeholder="Event Name" name="name" value="<%= data.name %>">
+
+  <label for="description"><b>Description</b></label>
+  <textarea name="description" cols="50" rows="2"><%= data.description %></textarea>
+
+  <label for="dateAt"><b>Date</b></label>
+  <input type="text" placeholder="Date of event" name="dateAt"  value="<%= data.dateAt %>">
+
+  <label for="timeAt"><b>Time</b></label>
+  <input type="text" placeholder="Time of event" name="timeAt"  value="<%= data.timeAt %>">
+
+  <label for="noofteams"><b>Number of teams</b></label>
+  <input type="text" placeholder="no. of teams participating" name="noofteams" value="<%= data.noofteams %>">
+
+  <input type="submit" value="Edit" class="btn">
+
+</form>

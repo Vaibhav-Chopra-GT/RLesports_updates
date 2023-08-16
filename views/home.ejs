@@ -1,0 +1,35 @@
+<div class="author">
+    <h1 class="author__heading">ROCKET LEAGUE ESPORTS.</h1>
+    <p class="author__body">RLesports news and updates</p>
+  </div>
+  
+  <img src="/img/rlcs.webp" alt="person looking out through window" class="hero-image" width="2081" height="428">
+  
+  <section class="articles">
+    <h2 class="articles__heading">Upcoming Events</h2>
+  
+    <ul class="article-ul">
+      
+        <% data.forEach(post => { %>
+            <li>
+              <a href="/event/<%= post._id %>">
+                <span><%= post.name %></span>
+                <span class="article-list__date"><%= post.dateAt %></span>
+                <span class="article-list__date"><%= post.timeAt %></span>
+              </a>
+            </li>
+          <% }) %>
+      
+    </ul>
+  
+  
+    
+    <a href="a" class="pagination">&lt; View Older Posts</a>
+    
+   
+  
+    
+  
+  
+  
+  </section>
